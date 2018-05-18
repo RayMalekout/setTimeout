@@ -48,20 +48,14 @@ let activity3 = (function() {
 //Now I have added a global let variable of counter to the top of the file, so a return parameter can be included
 //The parameter is passed in as 10. The counter is private within this function due to (function, so the the counter doesnt clash with the global
 let activity4 = (function(internalcounter) {
-  setTimeout(function() {internalcounter += 1; console.log("counter value is " + internalcounter)}, 2000);
+  setTimeout(function() {console.log("counter value is " + internalcounter)}, 2000);
 })(10);
-//The functions can be modified so they take either the value of the global counter variable, or assign the parameter passed in as the local couner variable instead.
-//This would use the global counter variable however
 
 let activity5 = function(internalcounter) {
-  setTimeout(function() {internalcounter += 1; console.log("counter value is " + internalcounter)}, 2000);
+  setTimeout(function() {console.log("counter value is " + internalcounter)}, 2000);
 };
 activity5(60);
+
 console.log(counter);
 
-//Now trying to implement a while do loop
-let activity6 = (function(internalcounter) {
-let newcounter = 63
-  setInterval(function() {console.log(newcounter + 1)}, 2000);
 
-})(0);
